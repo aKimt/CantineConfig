@@ -4,3 +4,8 @@ spring:
       host: localhost
       port: 27017
       database: mangerDB
+  cloud:
+    consul:
+      discovery:
+        instance-id: ${spring.application.name}
+        service-name: ${spring.application.name}:${random.uuid}
