@@ -12,3 +12,15 @@ spring:
       discovery:
         instance-id: ${spring.application.name}
         service-name: ${spring.application.name}:${random.uuid}
+  stream:
+    binders:
+      my-rabbit:
+        type: rabbit
+        environment:
+          spring:
+            rabbitmq:
+              host: localhost
+              port: 5672
+              username: guest
+              password: guest
+              virtual-host: /
