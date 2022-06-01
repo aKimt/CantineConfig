@@ -9,9 +9,10 @@ spring:
       database: mangerDB
   cloud:
     consul:
+      host: 10.26.128.7
       discovery:
-        instance-id: ${spring.application.name}
-        service-name: ${spring.application.name}:${random.uuid}
+        service-name: ${spring.application.name}
+        instance-id: ${spring.application.name}:${random.uuid}
   stream:
     binders:
       my-rabbit:
