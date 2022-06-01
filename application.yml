@@ -9,7 +9,6 @@ spring:
       database: mangerDB
   cloud:
     consul:
-      host: 10.26.128.7
       discovery:
         service-name: ${spring.application.name}
         instance-id: ${spring.application.name}:${random.uuid}
