@@ -9,3 +9,9 @@ spring:
           destination: abstract.input
           group: queue
           binder: my-rabbit
+application:
+  jwt:
+    prefix: "Bearer "
+    header: "Authorization"
+    key: "<J7Fz~X>-/co_*Y"
+    expires: 846000000
