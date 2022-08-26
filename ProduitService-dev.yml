@@ -1,14 +1,6 @@
 server:
   port: 8989
 
-spring:
-  cloud:
-    stream:
-      bindings:
-        input-test:
-          destination: abstract.input
-          group: queue
-          binder: my-rabbit
 application:
   jwt:
     prefix: "Bearer "
