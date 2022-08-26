@@ -3,23 +3,6 @@
 spring:
   data:
     mongodb:
-      host: localhost
+      host: mongodb
       port: 27017
       database: mangerDB
-  cloud:
-    consul:
-      discovery:
-        service-name: ${spring.application.name}
-        instance-id: ${spring.application.name}:${random.uuid}
-  stream:
-    binders:
-      my-rabbit:
-        type: rabbit
-        environment:
-          spring:
-            rabbitmq:
-              host: localhost
-              port: 5672
-              username: guest
-              password: guest
-              virtual-host: /
